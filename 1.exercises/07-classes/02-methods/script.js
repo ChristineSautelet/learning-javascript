@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        class Person {
+            constructor(firstname, lastname) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+            }
+            RetourHello () {
+                return "hello",this.firstname, this.lastname;
+    
+            }
+        }
+
+    })
 })();

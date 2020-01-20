@@ -11,4 +11,8 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        var Moi = {firstName:"Christine", lastName:"Sautelet", age:50, city:"Blaton", country:"Belgium"};
+        console.log(Moi);
+    })
 })();

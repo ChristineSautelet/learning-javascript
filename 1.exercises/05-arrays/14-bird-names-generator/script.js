@@ -39,4 +39,15 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        x=Math.floor(Math.random(birds.length)*birds.length);
+        NewTab=Array.from(adjectives);
+        z=Math.floor(Math.random(NewTab.length)*NewTab.length);
+        if (birds[x].fem){
+        document.getElementById("target").innerHTML = "La "+birds[x].name+" "+NewTab[z]+"e";
+        } else{
+            document.getElementById("target").innerHTML = "Le "+birds[x].name+" "+NewTab[z];
+        }
+    })
+
 })();

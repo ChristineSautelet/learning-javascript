@@ -89,4 +89,14 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+    const NewPeople = [];
+    people.forEach(element => NewPeople.push(element.age));
+    
+    console.log(NewPeople.reduce(myFunc));
+
+    function myFunc(total, num) {
+      return total + num;
+    } 
+    })
 })();

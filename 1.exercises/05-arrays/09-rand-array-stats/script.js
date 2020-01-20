@@ -21,11 +21,16 @@
     }
 
     var i;
+    var Somme= 0;
     for (i = 0; i < LesNombres.length; i++) {
         LesNombres.splice(i, 1, entierAleatoire(1,100));
         document.getElementById("n-"+(i+1)).innerHTML = LesNombres[i];
+        Somme=Somme+LesNombres[i];
+
     }
     document.getElementById("min").innerHTML = Math.min(...LesNombres);
-        
+    document.getElementById("max").innerHTML = Math.max(...LesNombres);
+    document.getElementById("sum").innerHTML = Somme;
+    document.getElementById("average").innerHTML= Somme/LesNombres.length;       
     })
 })();

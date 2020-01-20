@@ -27,4 +27,11 @@
         user: null,
     };
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        for (i=0;i<computers.length;i++){
+        Laligne = computers[i];
+        var LaFusion = Object.assign({}, defaultProps, Laligne);
+        console.log(LaFusion);
+        }
+    })
 })();
