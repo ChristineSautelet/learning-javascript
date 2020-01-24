@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    let target = document.getElementById("target");
+    let tbl = document.createElement("table");
+    for (let i = 0; i < 10; i++) {
+        let tblRow = document.createElement("tr");
+        let tblCol = document.createElement("td");
+        tblCol.innerHTML = "text";
+        tblRow.appendChild(tblCol);
+        tbl.appendChild(tblRow);
+    }
+    target.appendChild(tbl);
+
+
 })();

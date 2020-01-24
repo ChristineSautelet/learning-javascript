@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    let articles = [];
+
+    function addCom(error, comment) {
+        articles.forEach(element => {
+            element["comments"] = comment;
+        });
+        console.log(articles);
+    }
+
+    function getCom(error, article) {
+        articles = article;
+        article.forEach(element => {
+            window.lib.getComments(element.id, addCom);
+        });
+    }
+    document.getElementById("run").addEventListener("click", () => {
+        window.lib.getPosts(getCom);
+    });
 })();

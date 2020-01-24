@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    document.getElementById("run").addEventListener("click", () => {
+        let promise = window.lib.getPersons();
+        async function f() {
+            let result = await promise;
+            console.log(result);
+        }
+        f().catch(error => console.error(error));
+
+    });
 })();

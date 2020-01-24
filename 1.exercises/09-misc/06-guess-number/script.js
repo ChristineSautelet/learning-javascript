@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    let random = Math.floor(Math.random() * 100);
+    let tour = true;
+    let choix = 0;
+    let counter = 0;
+    choix = prompt("Choisisez un chiffre entre 0 et 100");
+    while (tour) {
+        counter++;
+        let numberchoice = parseInt(choix);
+        if (choix > random) {
+            choix = prompt("Plus petit !");
+        } else if (choix < random) {
+            choix = prompt("Plus grand !");
+        } else {
+            alert("Vous avez trouver le chiffre mystère : " + random + " en " + counter + " coups");
+            tour = false;
+        }
+
+    }
 })();

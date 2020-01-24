@@ -11,4 +11,21 @@
 
 (() => {
     // your code here
-})();
+    var LaSource = document.querySelector("#source").attributes;
+    var monImage = document.createElement('img');
+    monImage.src = LaSource[1].value;
+    var maFig = document.getElementById("target");
+    maFig.innerHTML = '';
+    maFig.appendChild(monImage);
+    var leDeb =document.querySelector("#source");
+    leDeb.remove;
+    console.log(leDeb);
+
+})(); 
+// CODE DE HUGO                   
+// let source = document.getElementById("source");
+// let path = source.getAttribute("data-image");
+// let child = document.createElement('img');
+// child.setAttribute("src", path);
+// let fig = document.getElementById("target").appendChild(child);
+// source.remove();

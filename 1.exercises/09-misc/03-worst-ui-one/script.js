@@ -11,4 +11,8 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    document.getElementById("slider").addEventListener("input", () => {
+        document.getElementById("target").innerHTML = "+" + document.getElementById("slider").value;
+    });
 })();

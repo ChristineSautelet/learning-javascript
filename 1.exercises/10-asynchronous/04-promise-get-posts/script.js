@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    document.getElementById("run").addEventListener("click", () => {
+        let promise = window.lib.getPosts();
+        promise.then((value) => { console.log(value) });
+    });
 })();

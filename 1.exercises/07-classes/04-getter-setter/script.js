@@ -11,4 +11,26 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    class Person {
+        constructor(firstname, lastname) {
+            this.firstname = firstname;
+            this.lastname = lastname;
+        }
+        get name() {
+            return this.firstname + " " + this.lastname;
+        }
+        set name(x) {
+            let nameFL = x.split(" ");
+            this.firstname = nameFL[0];
+            this.lastname = nameFL[1];
+        }
+
+    }
+    document.getElementById("run").addEventListener("click", () => {
+        let person = new Person("hugo", "Bricoult");
+        console.log(person.name);
+        person.name = "soufiane amjahad";
+        console.log(person.name);
+    });
 })();

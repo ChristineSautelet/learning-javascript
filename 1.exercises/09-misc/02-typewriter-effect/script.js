@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    let text = document.getElementById("target").innerHTML.split("");
+    document.getElementById("target").innerHTML = "";
+    let time = 0;
+    let random = 0;
+    for (let i = 0; i < text.length; i++) {
+        setTimeout(() => {
+            document.getElementById("target").innerHTML += text[i];
+        }, time);
+        random = Math.floor(Math.random() * 200);
+        time += random;
+    }
 })();

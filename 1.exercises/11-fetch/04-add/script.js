@@ -11,4 +11,32 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    alert("séparer les pouvoirs par une virgule");
+    document.getElementById("run").addEventListener("click", () => {
+        let name = document.getElementById("hero-name").value;
+        let alterEgo = document.getElementById("hero-alter-ego").value;
+        let power = document.getElementById("hero-powers").value;
+        //vérification Champs vides
+        if (name == "" || alterEgo == "" || power == "") {
+            alert("Touts les champs doivent être rempli !");
+        } else {
+
+            //transformer les pouvoirs en un tableau
+            let powers = power.split(",");
+            //contruction de l'objet hero
+            let hero = {
+                name: name,
+                alterEgo: alterEgo,
+                abilities: powers
+            };
+            let req = fetch("http://localhost:3000/heroes", {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                body: JSON.stringify(hero)
+            }).then((res) => console.log(res)).catch((res) => console.log(res));
+        }
+    });
 })();

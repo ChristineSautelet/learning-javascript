@@ -11,4 +11,10 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    let image = document.getElementsByTagName('img');
+    image[0].addEventListener("mouseover", () => {
+        image[0].setAttribute("src", image[0].getAttribute("data-hover"));
+    });
+
 })();

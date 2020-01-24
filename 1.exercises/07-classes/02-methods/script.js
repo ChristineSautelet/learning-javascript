@@ -13,15 +13,17 @@
     // your code here
     document.getElementById("run").addEventListener("click", () => {
         class Person {
+
             constructor(firstname, lastname) {
                 this.firstname = firstname;
                 this.lastname = lastname;
             }
             RetourHello () {
-                return "hello",this.firstname, this.lastname;
-    
+                return "Hello "+this.firstname +" "+ this.lastname;
             }
         }
 
+        let a1 = new Person('Jean', 'Némar');
+        console.log(a1.RetourHello());
     })
 })();

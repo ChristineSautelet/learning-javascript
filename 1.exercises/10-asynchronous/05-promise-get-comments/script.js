@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    document.getElementById("run").addEventListener("click", () => {
+        let promise = window.lib.getPosts();
+        promise.then((value) => {
+            value.forEach(element => {
+                let promiseCom = window.lib.getComments(element.id);
+                promiseCom.then((val) => {
+                    element["comments"] = val;
+
+                });
+                console.log(value);
+            });
+        });
+    });
 })();

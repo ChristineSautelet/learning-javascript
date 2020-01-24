@@ -16,4 +16,33 @@
         }
     }
     // your code here
+
+    class Chat extends Animal{
+        static get greeting (){
+            return "Miaou";
+        }
+        constructor(name){
+            super();
+            this.name= name;
+        }
+     }
+
+    class Chien extends Animal{
+        static get greeting (){
+            return "Wouaf";
+        }
+        constructor(name){
+            super();
+            this.name= name;
+        }
+    }
+    document.getElementById("run").addEventListener("click", () => {
+
+    var chat = new Chat("Youri");
+    var chien = new Chien("Rex");
+
+    console.log(chat.sayHello());
+    console.log(chien.sayHello());
+    })
+
 })();

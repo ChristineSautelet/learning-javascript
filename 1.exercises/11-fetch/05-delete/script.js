@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    document.getElementById("run").addEventListener("click", () => {
+        let id = parseInt(document.getElementById("hero-id").value);
+        let url = "http://localhost:3000/heroes/" + id;
+        fetch(url, {
+            method: "DELETE"
+        }).then(res => console.log(res));
+
+    });
 })();

@@ -11,4 +11,8 @@
 
 (() => {
     // your code here
+    var doc = document.querySelectorAll('.target');
+    for(i=0;i<doc.length;i++){
+    doc[i].textContent="owned"
+    }
 })();

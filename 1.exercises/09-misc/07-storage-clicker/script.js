@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    if (!localStorage.getItem('compteur')) {
+        localStorage.setItem('compteur', 0);
+    }
+    document.getElementById("target").innerHTML = localStorage.getItem('compteur');
+    document.getElementById("increment").addEventListener("click", () => {
+        let nombre = localStorage.getItem('compteur');
+        nombre++;
+        document.getElementById("target").innerHTML = nombre;
+        localStorage.setItem('compteur', nombre);
+    });
 })();

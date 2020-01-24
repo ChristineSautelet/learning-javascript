@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    // CODE DE HUGO
+    //fonction afficher dans la console
+    function teste(error, article) {
+        console.log(error);
+        console.log(article);
+    }
+    document.getElementById("run").addEventListener("click", () => {
+        //fonction get post renvoie des donnée en callback depuis callback.js et utils.js
+        window.lib.getPosts(teste);
+    });
 })();
